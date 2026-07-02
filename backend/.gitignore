@@ -1,16 +1,19 @@
-# Python virtual environment
+# Virtual Environment
 venv/
 
-# Python cache
+# Environment Variables
+.env
+
+# Python
 __pycache__/
 *.pyc
 
-# Environment variables
-.env
+# Pytest
+.pytest_cache/
 
 # IDE
 .vscode/
 .idea/
 
-# Node
-node_modules/
+# Logs
+*.log
