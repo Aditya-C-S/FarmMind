@@ -1,6 +1,6 @@
 """
 Crop model for FarmMind backend.
-Represents a crop grown in a field.
+Represents a crop grown in a field with Phase 2 relationships.
 """
 
 from sqlalchemy import Column, String, Date, ForeignKey
@@ -37,9 +37,17 @@ class Crop(Base):
     # Crop Status
     status = Column(String(20), default="active", nullable=False)  # active, completed, failed
     
-    # Relationships
+    # Relationships - Phase 1
     field = relationship("Field", back_populates="crops")
     
+    # Relationships - Phase 2: Farm Memory
+    activities = relationship("ActivityLog", back_populates="crop", cascade="all, delete-orphan")
+    disease_history = relationship("DiseaseHistory", back_populates="crop", cascade="all, delete-orphan")
+    irrigations = relationship("Irrigation", back_populates="crop", cascade="all, delete-orphan")
+    fertilizers = relationship("FertilizerApplication", back_populates="crop", cascade="all, delete-orphan")
+    
+    harvest_records = relationship("HarvestRecord", back_populates="crop", cascade="all, delete-orphan", passive_deletes=True)
+
     def __repr__(self) -> str:
         return f"<Crop(crop_id={self.crop_id}, crop_type='{self.crop_type}', field_id={self.field_id}, status='{self.status}')>"
     

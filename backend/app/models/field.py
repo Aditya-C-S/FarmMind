@@ -1,6 +1,6 @@
 """
 Field model for FarmMind backend.
-Represents a farm field belonging to a farmer.
+Represents a farm field belonging to a farmer with Phase 2 relationships.
 """
 
 from sqlalchemy import Column, String, Numeric, ForeignKey
@@ -35,9 +35,12 @@ class Field(Base):
     latitude = Column(Numeric(10, 8), nullable=True)
     longitude = Column(Numeric(11, 8), nullable=True)
     
-    # Relationships
+    # Relationships - Phase 1
     farmer = relationship("Farmer", back_populates="fields")
     crops = relationship("Crop", back_populates="field", cascade="all, delete-orphan")
+    
+    # Relationships - Phase 2: Weather Cache
+    weather_cache = relationship("WeatherCache", back_populates="field", cascade="all, delete-orphan")
     
     def __repr__(self) -> str:
         return f"<Field(field_id={self.field_id}, field_name='{self.field_name}', farmer_id={self.farmer_id})>"

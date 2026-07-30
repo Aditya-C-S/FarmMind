@@ -1,6 +1,6 @@
 """
-FarmMind Backend - Main Application Entry Point
-FastAPI application initialization and configuration
+FarmMind Backend - Main FastAPI Application
+Initializes database, configures middleware, and registers routes.
 """
 
 from fastapi import FastAPI
@@ -8,181 +8,116 @@ from fastapi.middleware.cors import CORSMiddleware
 import logging
 
 from app.core.config import settings
-from app.database import Base, engine, test_connection
-from app.api import farmer_routes, field_routes, crop_routes
+from app.database.database import engine
+from app.database.base import Base
+
+# Phase 1 Routers
+from app.api.farmer_routes import router as farmer_router
+from app.api.field_routes import router as field_router
+from app.api.crop_routes import router as crop_router
+
+# Phase 2 Routers
+from app.api.activity_routes import router as activity_router
+from app.api.disease_routes import router as disease_router
+from app.api.weather_routes import router as weather_router
+from app.api.irrigation_routes import router as irrigation_router
+from app.api.fertilizer_routes import router as fertilizer_router
+
+from app.api.workflow_routes import router as workflow_router
+from app.api.context_fusion_routes import router as context_fusion_router
+
+from app.api.decision_optimization_routes import router as decision_optimization_router
+from app.api.disease_analysis_routes import router as disease_analysis_router
+from app.api.post_harvest_routes import router as post_harvest_router
+
 
 # Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-)
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Create FastAPI application
 app = FastAPI(
     title=settings.API_TITLE,
-    description="AI-powered farm decision optimization and post-harvest loss reduction platform",
+    description="AI-Powered Farm Intelligence & Workflow Optimization System",
     version=settings.API_VERSION,
-    docs_url="/docs",  # Swagger UI
-    redoc_url="/redoc",  # ReDoc
-    openapi_url="/openapi.json",  # OpenAPI schema
+    docs_url="/docs",
+    redoc_url="/redoc",
+    openapi_url="/openapi.json"
 )
 
-# Add CORS middleware (for frontend communication later)
+# Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.CORS_ORIGINS,
-    allow_credentials=settings.CORS_ALLOW_CREDENTIALS,
-    allow_methods=settings.CORS_ALLOW_METHODS,
-    allow_headers=settings.CORS_ALLOW_HEADERS,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
-# ===========================
-# Startup Events
-# ===========================
 
+# Startup event
 @app.on_event("startup")
-async def startup_event():
+def startup_event():
     """
-    Run on application startup.
-    Creates database tables and tests connection.
+    Startup event handler.
+    Creates all database tables and logs startup information.
     """
-    logger.info("=" * 60)
-    logger.info("🚀 FarmMind Backend Starting Up")
-    logger.info("=" * 60)
-    
-    # Test database connection
-    logger.info("📊 Testing database connection...")
-    if test_connection():
-        logger.info("✓ Database connection successful")
-    else:
-        logger.error("✗ Database connection failed!")
-        raise Exception("Cannot connect to database")
-    
-    # Create tables
-    logger.info("📋 Creating database tables...")
     try:
         Base.metadata.create_all(bind=engine)
         logger.info("✓ Database tables created/verified")
+        logger.info(f"✓ API running on {settings.API_TITLE} v{settings.API_VERSION}")
+        logger.info(f"✓ Debug mode: {settings.DEBUG}")
     except Exception as e:
-        logger.error(f"✗ Failed to create tables: {str(e)}")
+        logger.error(f"✗ Startup error: {str(e)}")
         raise
-    
-    logger.info("=" * 60)
-    logger.info(f"✓ FarmMind API {settings.API_VERSION} Ready!")
-    logger.info(f"📖 Swagger UI: http://localhost:8000/docs")
-    logger.info(f"📚 ReDoc: http://localhost:8000/redoc")
-    logger.info("=" * 60)
 
 
-@app.on_event("shutdown")
-async def shutdown_event():
-    """Run on application shutdown."""
-    logger.info("🛑 FarmMind Backend Shutting Down")
-
-
-# ===========================
 # Health Check Endpoint
-# ===========================
-
-@app.get(
-    "/health",
-    tags=["Health"],
-    summary="Health check",
-    description="Check if the API is running"
-)
-async def health_check():
-    """
-    Health check endpoint.
-    Returns the current API status.
-    """
+@app.get("/health", tags=["Health"])
+def health_check():
+    """Health check endpoint"""
     return {
         "status": "healthy",
         "api": settings.API_TITLE,
-        "version": settings.API_VERSION,
-        "debug": settings.DEBUG,
+        "version": settings.API_VERSION
     }
 
 
-# ===========================
 # Root Endpoint
-# ===========================
-
-@app.get(
-    "/",
-    tags=["Root"],
-    summary="API Information",
-    description="Get API information"
-)
-async def root():
-    """
-    Root endpoint.
-    Returns basic API information.
-    """
+@app.get("/", tags=["Root"])
+def root():
+    """Root endpoint with API information"""
     return {
-        "message": "Welcome to FarmMind API",
-        "api_title": settings.API_TITLE,
+        "name": settings.API_TITLE,
         "version": settings.API_VERSION,
-        "description": "AI-powered farm decision optimization and post-harvest loss reduction",
-        "docs": "http://localhost:8000/docs",
-        "health": "http://localhost:8000/health",
+        "description": "AI-Powered Farm Intelligence & Workflow Optimization System",
+        "docs": "/docs",
+        "redoc": "/redoc"
     }
 
 
-# ===========================
-# Register API Routes
-# ===========================
+# Register Phase 1 Routes
+app.include_router(farmer_router)
+app.include_router(field_router)
+app.include_router(crop_router)
 
-# Include farmer routes
-app.include_router(
-    farmer_routes.router,
-    prefix="",
-    tags=["Farmers"]
-)
+# Register Phase 2 Routes
+app.include_router(activity_router)
+app.include_router(disease_router)
+app.include_router(weather_router)
+app.include_router(irrigation_router)
+app.include_router(fertilizer_router)
 
-# Include field routes
-app.include_router(
-    field_routes.router,
-    prefix="",
-    tags=["Fields"]
-)
+app.include_router(workflow_router)
+app.include_router(context_fusion_router)
 
-# Include crop routes
-app.include_router(
-    crop_routes.router,
-    prefix="",
-    tags=["Crops"]
-)
+app.include_router(decision_optimization_router)
+app.include_router(disease_analysis_router)
+app.include_router(post_harvest_router)
 
-logger.info("✓ All API routes registered")
+logger.info("✓ All routes registered (Phase 1 + Phase 2 + Disease Analysis)")
 
-
-# ===========================
-# Error Handlers
-# ===========================
-
-@app.exception_handler(Exception)
-async def general_exception_handler(request, exc):
-    """Handle unexpected exceptions"""
-    logger.error(f"Unhandled exception: {str(exc)}")
-    return {
-        "detail": "Internal server error",
-        "error": str(exc) if settings.DEBUG else "An error occurred"
-    }
-
-
-# ===========================
-# Application Export
-# ===========================
 
 if __name__ == "__main__":
-    # For running with: python -m uvicorn app.main:app --reload
     import uvicorn
-    
-    uvicorn.run(
-        "app.main:app",
-        host="0.0.0.0",
-        port=8000,
-        reload=settings.DEBUG,
-        log_level="info",
-    )
+    uvicorn.run(app, host="0.0.0.0", port=8000)

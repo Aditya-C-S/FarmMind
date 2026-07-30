@@ -49,7 +49,7 @@ class CropService:
                 variety=crop_data.variety,
                 sowing_date=crop_data.sowing_date,
                 expected_harvest_date=crop_data.expected_harvest_date,
-                status="active",
+                status=crop_data.status.value,
             )
             db.add(db_crop)
             db.commit()
@@ -176,6 +176,9 @@ class CropService:
                     raise ValueError("Expected harvest date must be after sowing date")
             
             for field, value in update_data.items():
+                # Unwrap enum to its string value for plain String DB columns
+                if hasattr(value, 'value'):
+                    value = value.value
                 setattr(db_crop, field, value)
             
             db.commit()

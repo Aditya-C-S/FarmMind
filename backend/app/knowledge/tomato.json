@@ -1,0 +1,994 @@
+{
+    "schema_version": "1.0",
+    "crop_name": "Tomato",
+    "crop_id": "tomato",
+    "metadata": {
+        "scientific_name": "Solanum lycopersicum",
+        "family": "Solanaceae",
+        "crop_type": "Vegetable",
+        "cultivation_systems": [
+            "Open Field",
+            "Protected Cultivation (Polyhouse)"
+        ],
+        "recommended_seasons": [
+            "Kharif",
+            "Rabi",
+            "Summer"
+        ],
+        "recommended_climate": {
+            "temperature_celsius": {
+                "minimum": 18,
+                "maximum": 30,
+                "optimal": "21-27"
+            },
+            "rainfall_mm": {
+                "minimum": 600,
+                "maximum": 1200,
+                "optimal": "800-1000"
+            },
+            "relative_humidity_percent": {
+                "minimum": 50,
+                "maximum": 70,
+                "optimal": "60-65"
+            }
+        },
+        "soil": {
+            "preferred_types": [
+                "Well-drained Loam",
+                "Sandy Loam",
+                "Red Loam"
+            ],
+            "optimal_ph": "6.0-7.0"
+        },
+        "day_basis": "DAP (Days After Planting)"
+    },
+    "varieties": [
+        {
+            "variety_name": "Arka Abhed",
+            "type": "Hybrid",
+            "duration_days": 145,
+            "yield": "70-75 t/ha",
+            "recommended_seasons": [
+                "Summer",
+                "Kharif",
+                "Rabi"
+            ],
+            "disease_resistance": [
+                "Tomato Leaf Curl Virus",
+                "Bacterial Wilt",
+                "Early Blight",
+                "Late Blight"
+            ]
+        },
+        {
+            "variety_name": "Arka Samrat",
+            "type": "Hybrid",
+            "duration_days": 150,
+            "yield": "30-35 t/acre",
+            "recommended_seasons": [
+                "Summer"
+            ],
+            "special_features": [
+                "Suitable for drip irrigation",
+                "Suitable for plastic mulch"
+            ]
+        }
+    ],
+    "crop_calendar": {
+        "nursery_days": 25,
+        "transplanting_day": 25,
+        "expected_crop_duration_days": 140,
+        "recommended_seasons": [
+            "Summer",
+            "Kharif",
+            "Rabi"
+        ]
+    },
+    "growth_timeline": {
+        "stages": [
+            {
+                "stage_id": "nursery",
+                "day_start": 0,
+                "day_end": 25
+            },
+            {
+                "stage_id": "vegetative",
+                "day_start": 26,
+                "day_end": 55
+            },
+            {
+                "stage_id": "flowering",
+                "day_start": 56,
+                "day_end": 80
+            },
+            {
+                "stage_id": "fruiting",
+                "day_start": 81,
+                "day_end": 120
+            },
+            {
+                "stage_id": "harvest",
+                "day_start": 121,
+                "day_end": 150
+            }
+        ]
+    },
+    "nursery": {
+        "duration_days": 25,
+        "objective": "Produce healthy seedlings for transplanting.",
+        "recommended_seedling_age_days": "20-25",
+        "seed_rate": "",
+        "seed_treatment": [],
+        "nursery_type": [
+            "Raised Bed Nursery"
+        ],
+        "recommended_practices": [
+            "Use healthy certified seeds.",
+            "Prepare raised nursery beds.",
+            "Ensure good drainage.",
+            "Maintain adequate soil moisture.",
+            "Protect seedlings from pests and diseases."
+        ],
+        "common_pests": [
+            {
+                "pest_id": "whitefly"
+            }
+        ],
+        "common_diseases": [
+            {
+                "disease_id": "tomato_leaf_curl_virus"
+            }
+        ]
+    },
+    "land_preparation": {
+        "objective": "Prepare a well-drained fertile field for transplanting.",
+        "field_preparation": [
+            "Plough field thoroughly.",
+            "Incorporate organic manure.",
+            "Prepare raised beds.",
+            "Ensure proper drainage."
+        ],
+        "soil_requirements": {
+            "preferred_soil": [
+                "Well-drained Loam",
+                "Sandy Loam"
+            ],
+            "optimal_ph": "6.0-7.0"
+        },
+        "recommended_practices": [
+            "Install drip irrigation if available.",
+            "Use plastic mulch where possible.",
+            "Avoid waterlogging."
+        ],
+        "fertilizer": {
+            "recommended": []
+        }
+    },
+    "transplanting": {
+        "recommended_seedling_age_days": "20-25",
+        "objective": "Establish healthy seedlings in the main field.",
+        "spacing": {
+            "row_spacing_cm": "",
+            "plant_spacing_cm": ""
+        },
+        "recommended_practices": [
+            "Transplant healthy seedlings.",
+            "Transplant during cooler hours of the day.",
+            "Irrigate immediately after transplanting.",
+            "Replace dead seedlings promptly."
+        ],
+        "irrigation": {
+            "practice": [
+                "Maintain adequate soil moisture after transplanting."
+            ]
+        },
+        "fertilizer": {
+            "recommended": []
+        },
+        "common_pests": [
+            {
+                "pest_id": "whitefly"
+            }
+        ],
+        "common_diseases": [
+            {
+                "disease_id": "bacterial_wilt"
+            }
+        ]
+    },
+    "stage_guidelines": [
+        {
+            "stage_id": "nursery",
+            "stage": "Nursery",
+            "day_start": 0,
+            "day_end": 25,
+            "objective": "Produce healthy seedlings for transplanting.",
+            "description": "Tomato seeds germinate and develop healthy roots and foliage before transplanting into the main field.",
+            "critical": false,
+            "tasks": [
+                "Maintain adequate moisture.",
+                "Inspect seedlings daily.",
+                "Remove weak or diseased seedlings."
+            ],
+            "monitoring": [
+                "Seed germination",
+                "Seedling vigour",
+                "Moisture level",
+                "Nursery pests"
+            ],
+            "irrigation": {
+                "critical": true,
+                "practice": [
+                    "Maintain moist soil.",
+                    "Avoid waterlogging."
+                ]
+            },
+            "fertilizer": {
+                "recommended": []
+            },
+            "weed_management": {
+                "critical": false,
+                "practice": [
+                    "Keep nursery weed free."
+                ]
+            },
+            "common_pests": [
+                {
+                    "pest_id": "whitefly",
+                    "risk_level": "Low",
+                    "monitor": true
+                }
+            ],
+            "common_diseases": [
+                {
+                    "disease_id": "tomato_leaf_curl_virus",
+                    "risk_level": "Low",
+                    "monitor": true
+                }
+            ],
+            "best_practices": [
+                "Use certified healthy seed.",
+                "Maintain nursery hygiene."
+            ],
+            "expected_crop_status": [
+                "Uniform germination",
+                "Healthy green seedlings",
+                "Strong root development"
+            ]
+        },
+        {
+            "stage_id": "vegetative",
+            "stage": "Vegetative",
+            "day_start": 26,
+            "day_end": 55,
+            "objective": "Promote vigorous vegetative growth and canopy development.",
+            "description": "Plants establish themselves after transplanting and rapidly develop stems and leaves.",
+            "critical": true,
+            "tasks": [
+                "Maintain irrigation.",
+                "Monitor plant growth.",
+                "Remove weeds.",
+                "Inspect for pests."
+            ],
+            "monitoring": [
+                "Plant height",
+                "Leaf colour",
+                "Stem growth",
+                "Pest incidence"
+            ],
+            "irrigation": {
+                "critical": true,
+                "practice": [
+                    "Maintain uniform soil moisture.",
+                    "Avoid prolonged water stress."
+                ]
+            },
+            "fertilizer": {
+                "recommended": []
+            },
+            "weed_management": {
+                "critical": true,
+                "practice": [
+                    "Remove weeds regularly."
+                ]
+            },
+            "common_pests": [
+                {
+                    "pest_id": "whitefly",
+                    "risk_level": "Medium",
+                    "monitor": true
+                },
+                {
+                    "pest_id": "leaf_miner",
+                    "risk_level": "Medium",
+                    "monitor": true
+                }
+            ],
+            "common_diseases": [
+                {
+                    "disease_id": "bacterial_wilt",
+                    "risk_level": "Medium",
+                    "monitor": true
+                }
+            ],
+            "best_practices": [
+                "Maintain field sanitation.",
+                "Use drip irrigation if available."
+            ],
+            "expected_crop_status": [
+                "Rapid vegetative growth",
+                "Healthy dark green foliage",
+                "Strong stem development"
+            ]
+        },
+        {
+            "stage_id": "flowering",
+            "stage": "Flowering",
+            "day_start": 56,
+            "day_end": 80,
+            "objective": "Ensure healthy flowering and maximize fruit set.",
+            "description": "Flower clusters develop and pollination begins, directly influencing future fruit production.",
+            "critical": true,
+            "tasks": [
+                "Maintain irrigation.",
+                "Monitor flowering.",
+                "Inspect for pest and disease outbreaks."
+            ],
+            "monitoring": [
+                "Flower development",
+                "Flower drop",
+                "Pollinator activity",
+                "Disease symptoms"
+            ],
+            "irrigation": {
+                "critical": true,
+                "practice": [
+                    "Avoid moisture stress during flowering."
+                ]
+            },
+            "fertilizer": {
+                "recommended": []
+            },
+            "weed_management": {
+                "critical": false,
+                "practice": []
+            },
+            "common_pests": [
+                {
+                    "pest_id": "fruit_borer",
+                    "risk_level": "High",
+                    "monitor": true
+                },
+                {
+                    "pest_id": "whitefly",
+                    "risk_level": "High",
+                    "monitor": true
+                }
+            ],
+            "common_diseases": [
+                {
+                    "disease_id": "early_blight",
+                    "risk_level": "Medium",
+                    "monitor": true
+                },
+                {
+                    "disease_id": "tomato_leaf_curl_virus",
+                    "risk_level": "High",
+                    "monitor": true
+                }
+            ],
+            "best_practices": [
+                "Maintain healthy crop growth.",
+                "Monitor flowers daily."
+            ],
+            "expected_crop_status": [
+                "Healthy flowering",
+                "Good flower retention",
+                "Uniform flowering"
+            ]
+        },
+        {
+            "stage_id": "fruiting",
+            "stage": "Fruiting",
+            "day_start": 81,
+            "day_end": 120,
+            "objective": "Support healthy fruit development and maximize fruit quality.",
+            "description": "Flowers develop into fruits while fruit size and quality improve until maturity.",
+            "critical": true,
+            "tasks": [
+                "Maintain irrigation.",
+                "Inspect developing fruits.",
+                "Harvest mature fruits regularly."
+            ],
+            "monitoring": [
+                "Fruit size",
+                "Fruit colour",
+                "Fruit damage",
+                "Disease incidence"
+            ],
+            "irrigation": {
+                "critical": true,
+                "practice": [
+                    "Maintain consistent soil moisture."
+                ]
+            },
+            "fertilizer": {
+                "recommended": []
+            },
+            "weed_management": {
+                "critical": false,
+                "practice": []
+            },
+            "common_pests": [
+                {
+                    "pest_id": "tuta_absoluta",
+                    "risk_level": "High",
+                    "monitor": true
+                },
+                {
+                    "pest_id": "fruit_borer",
+                    "risk_level": "High",
+                    "monitor": true
+                }
+            ],
+            "common_diseases": [
+                {
+                    "disease_id": "late_blight",
+                    "risk_level": "High",
+                    "monitor": true
+                },
+                {
+                    "disease_id": "early_blight",
+                    "risk_level": "Medium",
+                    "monitor": true
+                }
+            ],
+            "best_practices": [
+                "Harvest ripe fruits regularly.",
+                "Remove damaged fruits immediately."
+            ],
+            "expected_crop_status": [
+                "Uniform fruit development",
+                "Healthy fruits",
+                "Good fruit colour"
+            ]
+        },
+        {
+            "stage_id": "harvest",
+            "stage": "Harvest",
+            "day_start": 121,
+            "day_end": 150,
+            "objective": "Harvest mature fruits while maintaining quality and minimizing losses.",
+            "description": "Tomatoes reach marketable maturity and should be harvested carefully to preserve quality.",
+            "critical": true,
+            "tasks": [
+                "Harvest mature fruits.",
+                "Sort and grade fruits.",
+                "Prepare fruits for storage or transport."
+            ],
+            "monitoring": [
+                "Fruit maturity",
+                "Fruit quality",
+                "Weather forecast"
+            ],
+            "irrigation": {
+                "critical": false,
+                "practice": [
+                    "Avoid excessive irrigation close to harvest."
+                ]
+            },
+            "fertilizer": {
+                "recommended": []
+            },
+            "weed_management": {
+                "critical": false,
+                "practice": []
+            },
+            "common_pests": [],
+            "common_diseases": [],
+            "best_practices": [
+                "Harvest during cooler hours.",
+                "Avoid damaging fruits during harvest.",
+                "Separate damaged fruits immediately."
+            ],
+            "expected_crop_status": [
+                "Uniform ripe fruits",
+                "Good market quality",
+                "Harvest-ready crop"
+            ]
+        }
+    ],
+    "pests": [
+        {
+            "pest_id": "whitefly",
+            "common_name": "Whitefly",
+            "scientific_name": "Bemisia tabaci",
+            "category": "Insect",
+            "affected_stages": [
+                "nursery",
+                "vegetative",
+                "flowering"
+            ],
+            "identification": {
+                "adult": "Small white winged insect found on the underside of leaves.",
+                "larvae_or_nymph": "Tiny pale yellow flattened nymph attached to leaf surface."
+            },
+            "damage_symptoms": [
+                "Leaf curling",
+                "Yellowing of leaves",
+                "Honeydew secretion leading to sooty mould",
+                "Transmits Tomato Leaf Curl Virus (TYLCV)"
+            ],
+            "favourable_conditions": [
+                "Warm temperatures",
+                "Dry weather",
+                "Dense crop canopy"
+            ],
+            "monitoring": [
+                "Inspect underside of leaves.",
+                "Observe adult whitefly population.",
+                "Check for leaf curl symptoms."
+            ],
+            "prevention": [
+                "Maintain field sanitation.",
+                "Use healthy seedlings.",
+                "Install yellow sticky traps."
+            ],
+            "management": [
+                "Follow Integrated Pest Management (IPM).",
+                "Monitor population regularly."
+            ],
+            "references": [
+                "ref_iihr_ipm"
+            ]
+        },
+        {
+            "pest_id": "fruit_borer",
+            "common_name": "Tomato Fruit Borer",
+            "scientific_name": "Helicoverpa armigera",
+            "category": "Insect",
+            "affected_stages": [
+                "flowering",
+                "fruiting"
+            ],
+            "identification": {
+                "adult": "Brown moth with dark markings.",
+                "larvae_or_nymph": "Green or brown caterpillar feeding inside fruits."
+            },
+            "damage_symptoms": [
+                "Circular holes in fruits.",
+                "Larvae feeding inside tomatoes.",
+                "Fruit rotting."
+            ],
+            "favourable_conditions": [
+                "Warm temperatures",
+                "Flowering and fruiting crop"
+            ],
+            "monitoring": [
+                "Inspect flowers and fruits.",
+                "Check fruits for bore holes."
+            ],
+            "prevention": [
+                "Grow marigold as trap crop.",
+                "Remove damaged fruits."
+            ],
+            "management": [
+                "Use recommended IPM practices.",
+                "Regular field scouting."
+            ],
+            "references": [
+                "ref_iihr_ipm"
+            ]
+        },
+        {
+            "pest_id": "tuta_absoluta",
+            "common_name": "Tomato Leaf Miner",
+            "scientific_name": "Tuta absoluta",
+            "category": "Insect",
+            "affected_stages": [
+                "flowering",
+                "fruiting"
+            ],
+            "identification": {
+                "adult": "Small grey moth.",
+                "larvae_or_nymph": "Cream coloured caterpillar mining leaves and fruits."
+            },
+            "damage_symptoms": [
+                "Leaf mines",
+                "Stem tunnels",
+                "Fruit damage",
+                "Premature fruit drop"
+            ],
+            "favourable_conditions": [
+                "Warm climate",
+                "Protected cultivation"
+            ],
+            "monitoring": [
+                "Install pheromone traps.",
+                "Inspect leaves for mines.",
+                "Observe damaged fruits."
+            ],
+            "prevention": [
+                "Install light traps before transplanting.",
+                "Destroy infested plant parts.",
+                "Maintain field hygiene."
+            ],
+            "management": [
+                "Follow IPM recommendations.",
+                "Monitor pheromone trap catches."
+            ],
+            "references": [
+                "ref_iihr_tuta"
+            ]
+        },
+        {
+            "pest_id": "leaf_miner",
+            "common_name": "Leaf Miner",
+            "scientific_name": "Liriomyza trifolii",
+            "category": "Insect",
+            "affected_stages": [
+                "vegetative",
+                "flowering"
+            ],
+            "identification": {
+                "adult": "Tiny black and yellow fly.",
+                "larvae_or_nymph": "Larvae feeding inside leaves."
+            },
+            "damage_symptoms": [
+                "White serpentine leaf mines.",
+                "Reduced photosynthesis."
+            ],
+            "favourable_conditions": [
+                "Warm weather"
+            ],
+            "monitoring": [
+                "Inspect leaves regularly.",
+                "Observe fresh mines."
+            ],
+            "prevention": [
+                "Remove damaged leaves.",
+                "Maintain crop hygiene."
+            ],
+            "management": [
+                "Follow IPM recommendations."
+            ],
+            "references": [
+                "ref_iihr_ipm"
+            ]
+        },
+        {
+            "pest_id": "red_spider_mite",
+            "common_name": "Red Spider Mite",
+            "scientific_name": "Tetranychus urticae",
+            "category": "Mite",
+            "affected_stages": [
+                "flowering",
+                "fruiting"
+            ],
+            "identification": {
+                "adult": "Tiny reddish mites found on lower leaf surface.",
+                "larvae_or_nymph": "Small pale mites."
+            },
+            "damage_symptoms": [
+                "Yellow speckling of leaves.",
+                "Leaf bronzing.",
+                "Fine webbing."
+            ],
+            "favourable_conditions": [
+                "Hot and dry weather"
+            ],
+            "monitoring": [
+                "Inspect underside of leaves.",
+                "Observe webbing."
+            ],
+            "prevention": [
+                "Maintain adequate irrigation.",
+                "Avoid prolonged dry conditions."
+            ],
+            "management": [
+                "Follow IPM recommendations."
+            ],
+            "references": [
+                "ref_iihr_ipm"
+            ]
+        }
+    ],
+    "diseases": [
+        {
+            "disease_id": "tomato_leaf_curl_virus",
+            "common_name": "Tomato Leaf Curl Virus",
+            "scientific_name": "Tomato yellow leaf curl virus",
+            "category": "Viral",
+            "causal_agent": "Tomato yellow leaf curl virus",
+            "affected_stages": [
+                "nursery",
+                "vegetative",
+                "flowering"
+            ],
+            "identification": {
+                "early_symptoms": [
+                    "Upward curling of young leaves.",
+                    "Leaf yellowing."
+                ],
+                "advanced_symptoms": [
+                    "Stunted plants.",
+                    "Reduced flowering.",
+                    "Poor fruit set."
+                ]
+            },
+            "favourable_conditions": [
+                "High whitefly population",
+                "Warm weather"
+            ],
+            "spread": [
+                "Whitefly vector"
+            ],
+            "monitoring": [
+                "Inspect new leaves.",
+                "Monitor whitefly population."
+            ],
+            "prevention": [
+                "Use resistant varieties.",
+                "Control whiteflies.",
+                "Remove infected plants."
+            ],
+            "management": [
+                "Destroy infected plants.",
+                "Follow integrated vector management."
+            ],
+            "references": [
+                "ref_iihr_arka_abhed",
+                "ref_iihr_ipm"
+            ]
+        },
+        {
+            "disease_id": "early_blight",
+            "common_name": "Early Blight",
+            "scientific_name": "Alternaria solani",
+            "category": "Fungal",
+            "causal_agent": "Alternaria solani",
+            "affected_stages": [
+                "flowering",
+                "fruiting"
+            ],
+            "identification": {
+                "early_symptoms": [
+                    "Small brown leaf spots with concentric rings."
+                ],
+                "advanced_symptoms": [
+                    "Large necrotic lesions.",
+                    "Leaf drop."
+                ]
+            },
+            "favourable_conditions": [
+                "Warm temperatures",
+                "High humidity"
+            ],
+            "spread": [
+                "Wind",
+                "Rain splash",
+                "Crop residue"
+            ],
+            "monitoring": [
+                "Inspect lower leaves.",
+                "Monitor lesion development."
+            ],
+            "prevention": [
+                "Maintain field sanitation.",
+                "Avoid overhead irrigation."
+            ],
+            "management": [
+                "Remove infected leaves.",
+                "Follow recommended disease management."
+            ],
+            "references": [
+                "ref_iihr_arka_abhed",
+                "ref_icar_horticulture"
+            ]
+        },
+        {
+            "disease_id": "late_blight",
+            "common_name": "Late Blight",
+            "scientific_name": "Phytophthora infestans",
+            "category": "Oomycete",
+            "causal_agent": "Phytophthora infestans",
+            "affected_stages": [
+                "fruiting"
+            ],
+            "identification": {
+                "early_symptoms": [
+                    "Water-soaked leaf lesions."
+                ],
+                "advanced_symptoms": [
+                    "Dark brown lesions.",
+                    "Fruit rot."
+                ]
+            },
+            "favourable_conditions": [
+                "Cool temperatures",
+                "High humidity",
+                "Frequent rainfall"
+            ],
+            "spread": [
+                "Wind",
+                "Rain splash"
+            ],
+            "monitoring": [
+                "Inspect leaves and fruits.",
+                "Monitor humid conditions."
+            ],
+            "prevention": [
+                "Maintain adequate spacing.",
+                "Improve field ventilation."
+            ],
+            "management": [
+                "Remove infected plants.",
+                "Follow integrated disease management."
+            ],
+            "references": [
+                "ref_iihr_arka_abhed",
+                "ref_icar_horticulture"
+            ]
+        },
+        {
+            "disease_id": "bacterial_wilt",
+            "common_name": "Bacterial Wilt",
+            "scientific_name": "Ralstonia solanacearum",
+            "category": "Bacterial",
+            "causal_agent": "Ralstonia solanacearum",
+            "affected_stages": [
+                "vegetative",
+                "flowering"
+            ],
+            "identification": {
+                "early_symptoms": [
+                    "Sudden wilting without leaf yellowing."
+                ],
+                "advanced_symptoms": [
+                    "Permanent wilting.",
+                    "Plant death."
+                ]
+            },
+            "favourable_conditions": [
+                "Warm temperatures",
+                "Moist soil"
+            ],
+            "spread": [
+                "Contaminated soil",
+                "Water",
+                "Infected seedlings"
+            ],
+            "monitoring": [
+                "Inspect wilting plants.",
+                "Observe stem discoloration."
+            ],
+            "prevention": [
+                "Use disease-free seedlings.",
+                "Maintain proper drainage."
+            ],
+            "management": [
+                "Remove infected plants.",
+                "Follow integrated disease management."
+            ],
+            "references": [
+                "ref_iihr_arka_abhed",
+                "ref_icar_horticulture"
+            ]
+        }
+    ],
+    "harvesting": {
+        "harvest_window": {
+            "days_after_planting": "120-150",
+            "harvest_type": "Multiple Harvests"
+        },
+        "maturity_indicators": [
+            "Fruit has reached characteristic colour of the variety.",
+            "Fruit is firm and well developed.",
+            "Uniform fruit size.",
+            "Marketable maturity achieved."
+        ],
+        "recommended_harvest_stage": {
+            "local_market": "Fully ripe",
+            "distant_market": "Breaker to Pink stage",
+            "processing": "Fully ripe"
+        },
+        "methods": [
+            {
+                "method_id": "manual",
+                "method": "Manual Harvesting",
+                "description": "Harvest fruits carefully by hand to avoid bruising."
+            }
+        ],
+        "precautions": [
+            "Harvest during cooler hours of the day.",
+            "Avoid harvesting wet fruits.",
+            "Do not pull fruits forcefully from the plant.",
+            "Handle fruits carefully to avoid bruising."
+        ],
+        "post_harvest_transition": [
+            "Sorting",
+            "Grading",
+            "Storage",
+            "Transportation"
+        ]
+    },
+    "post_harvest": {
+        "sorting": {
+            "recommended_practices": [
+                "Remove damaged fruits.",
+                "Separate diseased fruits.",
+                "Group fruits based on maturity."
+            ]
+        },
+        "grading": {
+            "recommended_practices": [
+                "Grade by size.",
+                "Grade by colour.",
+                "Grade by quality."
+            ]
+        },
+        "storage": {
+            "recommended_temperature_celsius": "12-15",
+            "relative_humidity_percent": "85-90",
+            "recommended_practices": [
+                "Store in cool well ventilated area.",
+                "Avoid direct sunlight.",
+                "Prevent mechanical damage."
+            ]
+        },
+        "transport": {
+            "recommended_practices": [
+                "Use ventilated crates.",
+                "Avoid over stacking.",
+                "Transport immediately after harvest."
+            ]
+        }
+    },
+    "weather_guidelines": [
+        {
+            "weather_id": "high_temperature",
+            "condition": "High Temperature",
+            "effect": [
+                "Flower drop may increase.",
+                "Fruit set may reduce.",
+                "Higher irrigation demand."
+            ]
+        },
+        {
+            "weather_id": "heavy_rain",
+            "condition": "Heavy Rainfall",
+            "effect": [
+                "Increases fungal disease risk.",
+                "May cause waterlogging.",
+                "Fruit cracking may occur."
+            ]
+        },
+        {
+            "weather_id": "high_humidity",
+            "condition": "High Humidity",
+            "effect": [
+                "Favours Late Blight.",
+                "Favours Early Blight.",
+                "Increases disease spread."
+            ]
+        },
+        {
+            "weather_id": "low_temperature",
+            "condition": "Low Temperature",
+            "effect": [
+                "Slower crop growth.",
+                "Delayed flowering."
+            ]
+        },
+        {
+            "weather_id": "strong_wind",
+            "condition": "Strong Wind",
+            "effect": [
+                "Plant damage.",
+                "Flower drop.",
+                "Reduced fruit set."
+            ]
+        }
+    ],
+    "references": []
+}

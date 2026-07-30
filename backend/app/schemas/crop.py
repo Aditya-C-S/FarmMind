@@ -7,6 +7,14 @@ from pydantic import BaseModel, Field, field_validator
 from typing import Optional
 from uuid import UUID
 from datetime import date
+from enum import Enum
+
+
+class CropStatus(str, Enum):
+    """Valid statuses for a crop."""
+    ACTIVE = "Active"
+    HARVESTED = "Harvested"
+    FAILED = "Failed"
 
 
 class CropCreate(BaseModel):
@@ -19,6 +27,7 @@ class CropCreate(BaseModel):
     variety: Optional[str] = Field(None, max_length=100, description="Variety of crop (e.g., IR-64, Arka Samrat)")
     sowing_date: date = Field(..., description="Date when crop was/will be sown")
     expected_harvest_date: date = Field(..., description="Expected harvest date")
+    status: CropStatus = Field(CropStatus.ACTIVE, description="Crop status (Active, Harvested, Failed)")
     
     @field_validator('expected_harvest_date')
     @classmethod
@@ -39,7 +48,7 @@ class CropUpdate(BaseModel):
     variety: Optional[str] = Field(None, max_length=100)
     sowing_date: Optional[date] = None
     expected_harvest_date: Optional[date] = None
-    status: Optional[str] = Field(None, description="Crop status (active, completed, failed)")
+    status: Optional[CropStatus] = Field(None, description="Crop status (Active, Harvested, Failed)")
     
     @field_validator('expected_harvest_date')
     @classmethod
@@ -62,7 +71,7 @@ class CropResponse(BaseModel):
     variety: Optional[str] = None
     sowing_date: date
     expected_harvest_date: date
-    status: str
+    status: CropStatus
     
     class Config:
         from_attributes = True
