@@ -1,0 +1,1137 @@
+{
+    "schema_version": "1.0",
+    "crop_name": "Rice",
+    "crop_id": "rice",
+    "metadata": {
+        "scientific_name": "Oryza sativa L.",
+        "family": "Poaceae",
+        "crop_type": "Cereal",
+        "recommended_region": [
+            "Karnataka"
+        ],
+        "cultivation_systems": [
+            "Transplanted Puddled Rice",
+            "Wet Seeded Rice",
+            "Dry Seeded Rice"
+        ],
+        "growing_seasons": [
+            "Kharif",
+            "Rabi",
+            "Summer"
+        ],
+        "crop_duration": {
+            "minimum_days": 110,
+            "maximum_days": 145
+        },
+        "soil": {
+            "preferred_texture": [
+                "Clay Loam",
+                "Loam"
+            ],
+            "drainage": "Poorly drained to puddled fields",
+            "preferred_ph": {
+                "minimum": 5.5,
+                "maximum": 7.5
+            }
+        },
+        "recommended_climate": {
+            "temperature_celsius": {
+                "minimum": 20,
+                "maximum": 35,
+                "optimal": "25-30"
+            },
+            "rainfall_mm": {
+                "minimum": 1000,
+                "maximum": 2000,
+                "optimal": "1200-1800"
+            },
+            "relative_humidity_percent": {
+                "minimum": 60,
+                "maximum": 90,
+                "optimal": "70-80"
+            }
+        }
+    },
+    "varieties": [
+        {
+            "variety_id": "ir64",
+            "name": "IR-64",
+            "duration_days": 120,
+            "type": "Medium Duration",
+            "recommended_seasons": [
+                "Kharif",
+                "Rabi"
+            ]
+        },
+        {
+            "variety_id": "sona_masuri",
+            "name": "Sona Masuri",
+            "duration_days": 135,
+            "type": "Medium Duration",
+            "recommended_seasons": [
+                "Kharif",
+                "Rabi"
+            ]
+        },
+        {
+            "variety_id": "mtu1010",
+            "name": "MTU-1010",
+            "duration_days": 120,
+            "type": "Medium Duration"
+        }
+    ],
+    "crop_calendar": {
+        "kharif": {
+            "nursery": "May-June",
+            "transplanting": "June-July",
+            "harvest": "October-November"
+        },
+        "rabi": {
+            "nursery": "November",
+            "transplanting": "December",
+            "harvest": "March-April"
+        },
+        "summer": {
+            "nursery": "January",
+            "transplanting": "February",
+            "harvest": "May-June"
+        }
+    },
+    "growth_timeline": {
+        "day_basis": "Days After Sowing (DAS)",
+        "stages": [
+            {
+                "stage_id": "nursery",
+                "stage": "Nursery",
+                "day_start": 0,
+                "day_end": 14
+            },
+            {
+                "stage_id": "transplanting",
+                "stage": "Transplanting",
+                "day_start": 15,
+                "day_end": 21
+            },
+            {
+                "stage_id": "tillering",
+                "stage": "Tillering",
+                "day_start": 22,
+                "day_end": 45
+            },
+            {
+                "stage_id": "panicle_initiation",
+                "stage": "Panicle Initiation",
+                "day_start": 46,
+                "day_end": 60
+            },
+            {
+                "stage_id": "booting_flowering",
+                "stage": "Booting and Flowering",
+                "day_start": 61,
+                "day_end": 95
+            },
+            {
+                "stage_id": "grain_filling",
+                "stage": "Grain Filling",
+                "day_start": 96,
+                "day_end": 120
+            },
+            {
+                "stage_id": "harvest",
+                "stage": "Harvest",
+                "day_start": 121,
+                "day_end": 145
+            }
+        ]
+    },
+    "nursery": {
+        "purpose": "Raise healthy seedlings for transplanting.",
+        "duration_days": 14,
+        "nursery_types": [
+            {
+                "type": "Wet Nursery",
+                "recommended_for": [
+                    "Transplanted Puddled Rice"
+                ],
+                "seedbed": {
+                    "bed_width_m": 2.5,
+                    "bed_length_m": "8-10",
+                    "channel_width_cm": 30
+                },
+                "recommended_practices": [
+                    "Prepare raised seedbeds.",
+                    "Keep seedbed slightly above channel level.",
+                    "Level seedbed to ensure proper drainage.",
+                    "Maintain puddled condition."
+                ]
+            },
+            {
+                "type": "Dry Nursery",
+                "recommended_for": [
+                    "Rainfed Rice"
+                ],
+                "recommended_practices": [
+                    "Use well-ploughed field with fine tilth.",
+                    "Prefer sandy loam or loam soil.",
+                    "Prepare raised beds in clay soils."
+                ]
+            }
+        ],
+        "water_management": {
+            "day_1": "Drain water 18-24 hours after sowing.",
+            "day_3_to_5": "Maintain saturated soil.",
+            "day_5_onwards": "Maintain approximately 1.5 cm standing water.",
+            "later_stage": "Maintain approximately 2.5 cm standing water.",
+            "precautions": [
+                "Avoid water stagnation.",
+                "Ensure proper drainage."
+            ]
+        },
+        "monitoring": [
+            "Uniform germination",
+            "Seedling vigour",
+            "Water stagnation",
+            "Nursery weeds"
+        ]
+    },
+    "land_preparation": {
+        "objective": "Prepare a level field with proper puddling for transplanting.",
+        "recommended_practices": [
+            "Summer ploughing before season.",
+            "Flood field 1-2 days before puddling.",
+            "Maintain approximately 2.5 cm water during puddling.",
+            "Ensure proper land levelling.",
+            "Provide drainage channels where required."
+        ],
+        "special_conditions": [
+            {
+                "condition": "Saline Soil",
+                "recommendation": [
+                    "Provide drainage channels.",
+                    "Apply green leaf manure before transplanting."
+                ]
+            },
+            {
+                "condition": "Sodic Soil",
+                "recommendation": [
+                    "Apply gypsum based on soil requirement.",
+                    "Improve drainage."
+                ]
+            },
+            {
+                "condition": "Acid Soil",
+                "recommendation": [
+                    "Apply lime according to soil test."
+                ]
+            }
+        ],
+        "field_requirements": [
+            "Proper bund formation",
+            "Uniform land levelling",
+            "Good irrigation channels"
+        ]
+    },
+    "transplanting": {
+        "recommended_seedling_age_days": 14,
+        "recommended_water_depth_cm": 2,
+        "spacing": {
+            "status": "Pending Validation"
+        },
+        "recommended_practices": [
+            "Transplant healthy seedlings only.",
+            "Maintain shallow standing water during transplanting.",
+            "Avoid deep planting.",
+            "Complete transplanting quickly for uniform establishment."
+        ],
+        "post_transplant_irrigation": {
+            "first_7_days": "Maintain approximately 2 cm standing water."
+        },
+        "monitoring": [
+            "Seedling establishment",
+            "Plant mortality",
+            "Uniform crop stand"
+        ],
+        "alerts": [
+            "Deep planting reduces tillering.",
+            "High water depth immediately after transplanting affects establishment."
+        ]
+    },
+    "stage_guidelines": [
+        {
+            "stage_id": "nursery",
+            "stage": "Nursery",
+            "day_start": 0,
+            "day_end": 14,
+            "objective": "Produce healthy seedlings for transplanting.",
+            "description": "Rice seedlings germinate and establish their initial root and shoot systems before being transplanted into the main field.",
+            "critical": false,
+            "tasks": [
+                "Prepare nursery beds.",
+                "Maintain proper drainage.",
+                "Maintain shallow standing water.",
+                "Monitor germination."
+            ],
+            "monitoring": [
+                "Seed germination",
+                "Seedling vigour",
+                "Water level",
+                "Nursery weeds"
+            ],
+            "irrigation": {
+                "practice": [
+                    "Drain water after 18–24 hours.",
+                    "Maintain saturated soil during early establishment.",
+                    "Maintain approximately 2.5 cm standing water after establishment."
+                ]
+            },
+            "fertilizer": {
+                "status": "Pending Validation"
+            },
+            "weed_management": {
+                "practice": [
+                    "Keep nursery weed free."
+                ]
+            },
+            "common_pests": [],
+            "common_diseases": [],
+            "best_practices": [
+                "Use healthy seedlings only.",
+                "Avoid water stagnation."
+            ],
+            "expected_crop_status": [
+                "Uniform germination",
+                "Healthy green seedlings",
+                "Strong root development"
+            ]
+        },
+        {
+            "stage_id": "transplanting",
+            "stage": "Transplanting",
+            "day_start": 15,
+            "day_end": 21,
+            "objective": "Establish seedlings successfully in the main field.",
+            "description": "Healthy seedlings are transplanted into puddled fields to begin vegetative growth.",
+            "critical": true,
+            "tasks": [
+                "Transplant healthy seedlings.",
+                "Maintain shallow water.",
+                "Replace missing hills."
+            ],
+            "monitoring": [
+                "Seedling survival",
+                "Uniform establishment"
+            ],
+            "irrigation": {
+                "practice": [
+                    "Maintain approximately 2 cm standing water during first week."
+                ]
+            },
+            "fertilizer": {
+                "status": "Pending Validation"
+            },
+            "weed_management": {
+                "practice": [
+                    "Monitor early weed emergence."
+                ]
+            },
+            "common_pests": [],
+            "common_diseases": [],
+            "best_practices": [
+                "Avoid deep planting."
+            ],
+            "expected_crop_status": [
+                "Healthy establishment",
+                "Uniform crop stand"
+            ]
+        },
+        {
+            "stage_id": "tillering",
+            "stage": "Tillering",
+            "day_start": 22,
+            "day_end": 45,
+            "objective": "Promote maximum productive tiller formation.",
+            "description": "The crop produces tillers that determine the potential number of panicles and overall yield.",
+            "critical": true,
+            "tasks": [
+                "Maintain irrigation.",
+                "Control weeds.",
+                "Monitor tiller development."
+            ],
+            "monitoring": [
+                "Tiller count",
+                "Leaf colour",
+                "Crop vigour"
+            ],
+            "irrigation": {
+                "practice": [
+                    "Avoid moisture stress."
+                ]
+            },
+            "fertilizer": {
+                "status": "Pending Validation"
+            },
+            "weed_management": {
+                "critical": true,
+                "practice": [
+                    "Keep field weed-free during active tiller formation."
+                ]
+            },
+            "common_pests": [
+                {
+                    "pest_id": "stem_borer",
+                    "risk_level": "Medium"
+                },
+                {
+                    "pest_id": "green_leafhopper",
+                    "risk_level": "Medium"
+                }
+            ],
+            "common_diseases": [
+                {
+                    "disease_id": "sheath_blight",
+                    "risk_level": "Low"
+                }
+            ],
+            "best_practices": [
+                "Maintain weed-free field.",
+                "Monitor tiller formation."
+            ],
+            "expected_crop_status": [
+                "Active tiller production",
+                "Healthy green canopy"
+            ]
+        },
+        {
+            "stage_id": "panicle_initiation",
+            "stage": "Panicle Initiation",
+            "day_start": 46,
+            "day_end": 60,
+            "objective": "Support panicle development and maximize yield potential.",
+            "description": "The developing panicle begins to form inside the stem. This is one of the most critical stages for determining final grain yield.",
+            "critical": true,
+            "tasks": [
+                "Maintain adequate irrigation.",
+                "Inspect crop for pest and disease symptoms.",
+                "Maintain healthy crop growth."
+            ],
+            "monitoring": [
+                "Crop vigour",
+                "Leaf colour",
+                "Water availability"
+            ],
+            "irrigation": {
+                "critical": true,
+                "practice": [
+                    "Avoid moisture stress.",
+                    "Maintain adequate soil moisture."
+                ]
+            },
+            "fertilizer": {
+                "recommended": [],
+                "status": "Pending Validation"
+            },
+            "weed_management": {
+                "critical": false,
+                "practice": [
+                    "Remove remaining weeds if present."
+                ]
+            },
+            "common_pests": [
+                {
+                    "pest_id": "stem_borer",
+                    "risk_level": "High",
+                    "monitor": true
+                },
+                {
+                    "pest_id": "brown_planthopper",
+                    "risk_level": "Medium",
+                    "monitor": true
+                }
+            ],
+            "common_diseases": [
+                {
+                    "disease_id": "sheath_blight",
+                    "risk_level": "Medium",
+                    "monitor": true
+                }
+            ],
+            "best_practices": [
+                "Avoid water stress during this stage.",
+                "Inspect crop frequently for disease symptoms."
+            ],
+            "expected_crop_status": [
+                "Healthy panicle initiation",
+                "Uniform green canopy",
+                "Active crop growth"
+            ]
+        },
+        {
+            "stage_id": "booting_flowering",
+            "stage": "Booting and Flowering",
+            "day_start": 61,
+            "day_end": 95,
+            "objective": "Ensure successful flowering and grain formation.",
+            "description": "Panicles emerge and flowering occurs. This is the most sensitive stage to water and environmental stress.",
+            "critical": true,
+            "tasks": [
+                "Maintain continuous irrigation.",
+                "Monitor flowering progress.",
+                "Inspect for pest and disease outbreaks."
+            ],
+            "monitoring": [
+                "Flower emergence",
+                "Panicle health",
+                "Disease symptoms"
+            ],
+            "irrigation": {
+                "critical": true,
+                "practice": [
+                    "Maintain adequate standing water.",
+                    "Prevent moisture stress."
+                ]
+            },
+            "fertilizer": {
+                "recommended": [],
+                "status": "Pending Validation"
+            },
+            "weed_management": {
+                "critical": false,
+                "practice": []
+            },
+            "common_pests": [
+                {
+                    "pest_id": "brown_planthopper",
+                    "risk_level": "High",
+                    "monitor": true
+                },
+                {
+                    "pest_id": "leaf_folder",
+                    "risk_level": "Medium",
+                    "monitor": true
+                }
+            ],
+            "common_diseases": [
+                {
+                    "disease_id": "sheath_blight",
+                    "risk_level": "High",
+                    "monitor": true
+                },
+                {
+                    "disease_id": "rice_blast",
+                    "risk_level": "Medium",
+                    "monitor": true
+                }
+            ],
+            "best_practices": [
+                "Maintain consistent water availability.",
+                "Monitor crop daily during flowering."
+            ],
+            "expected_crop_status": [
+                "Healthy flowering",
+                "Uniform panicle emergence",
+                "Normal pollination"
+            ]
+        },
+        {
+            "stage_id": "grain_filling",
+            "stage": "Grain Filling",
+            "day_start": 96,
+            "day_end": 120,
+            "objective": "Support grain development and maximize grain quality.",
+            "description": "The grains develop and mature. Proper water management is essential until physiological maturity.",
+            "critical": true,
+            "tasks": [
+                "Continue irrigation.",
+                "Monitor grain development.",
+                "Inspect for late-season diseases."
+            ],
+            "monitoring": [
+                "Grain development",
+                "Leaf senescence",
+                "Panicle condition"
+            ],
+            "irrigation": {
+                "critical": true,
+                "practice": [
+                    "Continue irrigation until recommended final irrigation.",
+                    "Prepare for irrigation withdrawal before harvest."
+                ]
+            },
+            "fertilizer": {
+                "recommended": [],
+                "status": "Pending Validation"
+            },
+            "weed_management": {
+                "critical": false,
+                "practice": []
+            },
+            "common_pests": [
+                {
+                    "pest_id": "brown_planthopper",
+                    "risk_level": "Medium",
+                    "monitor": true
+                }
+            ],
+            "common_diseases": [
+                {
+                    "disease_id": "brown_spot",
+                    "risk_level": "Medium",
+                    "monitor": true
+                }
+            ],
+            "best_practices": [
+                "Maintain crop health until maturity.",
+                "Avoid unnecessary field disturbance."
+            ],
+            "expected_crop_status": [
+                "Well-filled grains",
+                "Healthy panicles",
+                "Gradual crop maturity"
+            ]
+        },
+        {
+            "stage_id": "harvest",
+            "stage": "Harvest",
+            "day_start": 121,
+            "day_end": 145,
+            "objective": "Harvest the crop at optimum maturity while minimizing yield and quality losses.",
+            "description": "The crop reaches physiological maturity and is ready for harvesting, threshing, drying and storage.",
+            "critical": true,
+            "tasks": [
+                "Confirm crop maturity.",
+                "Harvest at the correct moisture content.",
+                "Begin drying immediately after threshing."
+            ],
+            "monitoring": [
+                "Grain colour",
+                "Grain moisture",
+                "Weather forecast"
+            ],
+            "irrigation": {
+                "critical": false,
+                "practice": [
+                    "Last irrigation should be completed approximately 15 days before harvest."
+                ]
+            },
+            "fertilizer": {
+                "recommended": [],
+                "status": "Not Applicable"
+            },
+            "weed_management": {
+                "critical": false,
+                "practice": []
+            },
+            "common_pests": [],
+            "common_diseases": [],
+            "best_practices": [
+                "Harvest when 80–85% of grains are straw coloured.",
+                "Harvest at approximately 20–25% grain moisture.",
+                "Dry grains immediately after threshing."
+            ],
+            "expected_crop_status": [
+                "Mature panicles",
+                "80–85% straw-coloured grains",
+                "Harvest-ready crop"
+            ]
+        }
+    ],
+    "pests": [
+        {
+            "pest_id": "stem_borer",
+            "common_name": "Rice Stem Borer",
+            "scientific_name": "Scirpophaga incertulas",
+            "category": "Insect",
+            "affected_stages": [
+                "tillering",
+                "panicle_initiation"
+            ],
+            "identification": {
+                "adult": "Yellowish moth with characteristic black spot on forewings.",
+                "larvae_or_nymph": "Creamy-white caterpillar with brown head."
+            },
+            "damage_symptoms": [
+                "Dead hearts during tillering.",
+                "White earheads during reproductive stage.",
+                "Hollow stem due to larval feeding."
+            ],
+            "favourable_conditions": [
+                "Warm and humid weather.",
+                "Dense crop canopy.",
+                "High nitrogen application."
+            ],
+            "monitoring": [
+                "Inspect central shoots for dead hearts.",
+                "Observe white earheads during reproductive stage.",
+                "Inspect stems for larval damage."
+            ],
+            "prevention": [
+                "Maintain balanced fertilizer application.",
+                "Avoid excessive nitrogen.",
+                "Destroy crop residues after harvest."
+            ],
+            "management": [
+                "Regular field scouting.",
+                "Follow recommended IPM practices.",
+                "Apply approved control measures when economic threshold is reached."
+            ],
+            "references": [
+                "ICAR",
+                "IRRI"
+            ]
+        },
+        {
+            "pest_id": "brown_planthopper",
+            "common_name": "Brown Planthopper",
+            "scientific_name": "Nilaparvata lugens",
+            "category": "Insect",
+            "affected_stages": [
+                "panicle_initiation",
+                "booting_flowering",
+                "grain_filling"
+            ],
+            "identification": {
+                "adult": "Small brown hopper found near the base of rice plants.",
+                "larvae_or_nymph": "Light brown wingless nymph."
+            },
+            "damage_symptoms": [
+                "Yellowing of plants.",
+                "Hopper burn.",
+                "Drying of affected patches."
+            ],
+            "favourable_conditions": [
+                "High humidity.",
+                "Dense planting.",
+                "Excess nitrogen."
+            ],
+            "monitoring": [
+                "Inspect the base of plants.",
+                "Monitor hopper population.",
+                "Watch for hopper burn symptoms."
+            ],
+            "prevention": [
+                "Avoid excessive nitrogen.",
+                "Maintain proper plant spacing.",
+                "Encourage natural predators."
+            ],
+            "management": [
+                "Follow integrated pest management practices.",
+                "Apply recommended interventions when threshold levels are exceeded."
+            ],
+            "references": [
+                "ICAR",
+                "IRRI"
+            ]
+        },
+        {
+            "pest_id": "green_leafhopper",
+            "common_name": "Green Leafhopper",
+            "scientific_name": "Nephotettix virescens",
+            "category": "Insect",
+            "affected_stages": [
+                "tillering",
+                "booting_flowering"
+            ],
+            "identification": {
+                "adult": "Small bright green wedge-shaped insect.",
+                "larvae_or_nymph": "Light green wingless nymph."
+            },
+            "damage_symptoms": [
+                "Yellowing of leaves.",
+                "Reduced plant vigour.",
+                "Acts as vector for viral diseases."
+            ],
+            "favourable_conditions": [
+                "Warm temperatures.",
+                "High humidity."
+            ],
+            "monitoring": [
+                "Inspect leaves regularly.",
+                "Observe hopper activity."
+            ],
+            "prevention": [
+                "Maintain field sanitation.",
+                "Avoid excessive nitrogen."
+            ],
+            "management": [
+                "Monitor population regularly.",
+                "Follow IPM recommendations."
+            ],
+            "references": [
+                "ICAR"
+            ]
+        },
+        {
+            "pest_id": "leaf_folder",
+            "common_name": "Rice Leaf Folder",
+            "scientific_name": "Cnaphalocrocis medinalis",
+            "category": "Insect",
+            "affected_stages": [
+                "booting_flowering"
+            ],
+            "identification": {
+                "adult": "Small brown moth with folded wings.",
+                "larvae_or_nymph": "Green caterpillar found inside folded leaves."
+            },
+            "damage_symptoms": [
+                "Leaves folded together.",
+                "Scraped green tissue.",
+                "Reduced photosynthesis."
+            ],
+            "favourable_conditions": [
+                "Humid weather.",
+                "Dense crop canopy."
+            ],
+            "monitoring": [
+                "Inspect folded leaves.",
+                "Check for caterpillars inside leaf folds."
+            ],
+            "prevention": [
+                "Maintain balanced crop nutrition.",
+                "Avoid excessive nitrogen."
+            ],
+            "management": [
+                "Regular scouting.",
+                "Apply IPM practices when required."
+            ],
+            "references": [
+                "ICAR"
+            ]
+        }
+    ],
+    "diseases": [
+        {
+            "disease_id": "sheath_blight",
+            "common_name": "Sheath Blight",
+            "scientific_name": "Rhizoctonia solani",
+            "category": "Fungal",
+            "causal_agent": "Rhizoctonia solani",
+            "affected_stages": [
+                "tillering",
+                "panicle_initiation",
+                "booting_flowering"
+            ],
+            "identification": {
+                "early_symptoms": [
+                    "Oval greenish-grey lesions on leaf sheath.",
+                    "Lesions near the water line."
+                ],
+                "advanced_symptoms": [
+                    "Lesions enlarge and merge.",
+                    "Upper leaves dry prematurely.",
+                    "Reduced grain filling."
+                ]
+            },
+            "favourable_conditions": [
+                "High humidity",
+                "Frequent rainfall",
+                "Dense crop canopy",
+                "Warm temperatures"
+            ],
+            "spread": [
+                "Infected crop residue",
+                "Irrigation water",
+                "Plant-to-plant contact"
+            ],
+            "monitoring": [
+                "Inspect lower leaf sheaths.",
+                "Monitor humid areas of the field.",
+                "Check for enlarging lesions."
+            ],
+            "prevention": [
+                "Maintain proper spacing.",
+                "Avoid excessive nitrogen.",
+                "Remove infected crop residues."
+            ],
+            "management": [
+                "Remove severely affected plants when possible.",
+                "Follow recommended disease management practices."
+            ],
+            "references": [
+                "ICAR",
+                "IRRI"
+            ]
+        },
+        {
+            "disease_id": "rice_blast",
+            "common_name": "Rice Blast",
+            "scientific_name": "Magnaporthe oryzae",
+            "category": "Fungal",
+            "causal_agent": "Magnaporthe oryzae",
+            "affected_stages": [
+                "booting_flowering"
+            ],
+            "identification": {
+                "early_symptoms": [
+                    "Small spindle-shaped lesions on leaves."
+                ],
+                "advanced_symptoms": [
+                    "Large grey lesions with brown margins.",
+                    "Neck blast causing empty panicles."
+                ]
+            },
+            "favourable_conditions": [
+                "High humidity",
+                "Frequent rainfall",
+                "Cool nights"
+            ],
+            "spread": [
+                "Airborne spores",
+                "Wind",
+                "Rain splash"
+            ],
+            "monitoring": [
+                "Inspect leaves regularly.",
+                "Check panicle neck during flowering."
+            ],
+            "prevention": [
+                "Use resistant varieties when available.",
+                "Maintain balanced fertilization."
+            ],
+            "management": [
+                "Monitor disease progression closely.",
+                "Follow recommended disease management practices."
+            ],
+            "references": [
+                "ICAR",
+                "IRRI"
+            ]
+        },
+        {
+            "disease_id": "bacterial_leaf_blight",
+            "common_name": "Bacterial Leaf Blight",
+            "scientific_name": "Xanthomonas oryzae pv. oryzae",
+            "category": "Bacterial",
+            "causal_agent": "Xanthomonas oryzae pv. oryzae",
+            "affected_stages": [
+                "tillering",
+                "booting_flowering"
+            ],
+            "identification": {
+                "early_symptoms": [
+                    "Water-soaked yellow streaks near leaf tips."
+                ],
+                "advanced_symptoms": [
+                    "Leaves dry from tip downward.",
+                    "Entire leaf becomes straw coloured."
+                ]
+            },
+            "favourable_conditions": [
+                "Heavy rainfall",
+                "Strong winds",
+                "High humidity"
+            ],
+            "spread": [
+                "Rain splash",
+                "Irrigation water",
+                "Infected plant material"
+            ],
+            "monitoring": [
+                "Inspect leaf tips.",
+                "Observe yellow streak development."
+            ],
+            "prevention": [
+                "Maintain field sanitation.",
+                "Avoid excessive nitrogen."
+            ],
+            "management": [
+                "Remove infected plant debris.",
+                "Follow recommended bacterial disease management."
+            ],
+            "references": [
+                "ICAR"
+            ]
+        },
+        {
+            "disease_id": "brown_spot",
+            "common_name": "Brown Spot",
+            "scientific_name": "Bipolaris oryzae",
+            "category": "Fungal",
+            "causal_agent": "Bipolaris oryzae",
+            "affected_stages": [
+                "grain_filling"
+            ],
+            "identification": {
+                "early_symptoms": [
+                    "Small circular brown spots on leaves."
+                ],
+                "advanced_symptoms": [
+                    "Numerous dark brown lesions.",
+                    "Premature leaf drying."
+                ]
+            },
+            "favourable_conditions": [
+                "Nutrient deficiency",
+                "High humidity",
+                "Moist conditions"
+            ],
+            "spread": [
+                "Seed",
+                "Crop residue",
+                "Wind"
+            ],
+            "monitoring": [
+                "Inspect leaves for brown lesions.",
+                "Monitor nutrient-deficient fields."
+            ],
+            "prevention": [
+                "Use healthy seed.",
+                "Maintain balanced nutrition."
+            ],
+            "management": [
+                "Monitor disease severity.",
+                "Follow recommended disease management practices."
+            ],
+            "references": [
+                "ICAR"
+            ]
+        }
+    ],
+    "harvesting": {
+        "harvest_window": {
+            "direct_seeded": {
+                "days_after_sowing": "110–120"
+            },
+            "transplanted": {
+                "days_after_transplanting": "100–110"
+            }
+        },
+        "maturity_indicators": [
+            "80–85% of grains are straw coloured.",
+            "Grains are firm but not brittle.",
+            "Panicles are fully mature.",
+            "Crop has reached physiological maturity."
+        ],
+        "recommended_moisture": {
+            "grain_moisture_percent": "20–25"
+        },
+        "methods": [
+            {
+                "method_id": "manual",
+                "method": "Manual Harvesting",
+                "description": "Harvest using sickles followed by manual threshing."
+            },
+            {
+                "method_id": "semi_mechanical",
+                "method": "Manual Harvesting + Mechanical Threshing",
+                "description": "Manual cutting followed by mechanical threshing."
+            },
+            {
+                "method_id": "combine",
+                "method": "Combine Harvester",
+                "description": "Harvesting, threshing and cleaning performed simultaneously."
+            }
+        ],
+        "precautions": [
+            "Harvest at optimum maturity.",
+            "Avoid harvesting immediately after rainfall.",
+            "Thresh as soon as possible after harvest.",
+            "Dry grains immediately after threshing."
+        ],
+        "post_harvest_transition": [
+            "Threshing",
+            "Drying",
+            "Storage"
+        ]
+    },
+    "post_harvest": {
+        "threshing": {
+            "recommended_practices": [
+                "Thresh immediately after harvesting.",
+                "Use proper machine settings.",
+                "Clean grains after threshing."
+            ]
+        },
+        "drying": {
+            "target_moisture_percent": {
+                "grain": 14,
+                "seed": 12
+            },
+            "recommended_practices": [
+                "Dry grains immediately after threshing.",
+                "Avoid rewetting after drying."
+            ]
+        },
+        "storage": {
+            "recommended_forms": [
+                "Paddy",
+                "Brown Rice"
+            ],
+            "storage_methods": [
+                "Bag Storage",
+                "Bulk Storage",
+                "Hermetic Storage"
+            ],
+            "safe_storage_conditions": [
+                "Grain moisture ≤14%",
+                "Seed moisture ≤12%",
+                "Protection from insects",
+                "Protection from rodents",
+                "Protection from birds",
+                "Prevent moisture re-entry"
+            ],
+            "good_storage_practices": [
+                "Inspect storage regularly.",
+                "Maintain storage hygiene.",
+                "Clean storage before reuse."
+            ]
+        },
+        "transport": {
+            "recommended_practices": [
+                "Transport dry grain only.",
+                "Protect from rain during transport.",
+                "Avoid grain contamination."
+            ]
+        }
+    },
+    "weather_guidelines": [
+        {
+            "weather_id": "high_humidity",
+            "condition": "High Humidity",
+            "effect": [
+                "Increases fungal disease risk.",
+                "Favours sheath blight development."
+            ]
+        },
+        {
+            "weather_id": "heavy_rainfall",
+            "condition": "Heavy Rainfall",
+            "effect": [
+                "May cause waterlogging.",
+                "Increases bacterial disease spread."
+            ]
+        },
+        {
+            "weather_id": "drought",
+            "condition": "Water Deficit",
+            "effect": [
+                "Reduces tillering.",
+                "Reduces grain yield if stress occurs during reproductive stages."
+            ]
+        },
+        {
+            "weather_id": "high_temperature",
+            "condition": "High Temperature",
+            "effect": [
+                "May reduce grain filling.",
+                "Increases crop water demand."
+            ]
+        }
+    ],
+    "references": [
+        {
+            "reference_id": "ref_icar_crop_production",
+            "organization": "Indian Council of Agricultural Research (ICAR)",
+            "title": "Crop Production Package of Practices"
+        },
+        {
+            "reference_id": "ref_irri_rkb",
+            "organization": "International Rice Research Institute (IRRI)",
+            "title": "Rice Knowledge Bank"
+        },
+        {
+            "reference_id": "ref_tnau_rice",
+            "organization": "Tamil Nadu Agricultural University (TNAU)",
+            "title": "Crop Production Guide - Rice"
+        }
+    ]
+}

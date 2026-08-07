@@ -1,2 +1,52 @@
+# ==========================
+# Python
+# ==========================
+venv/
+.venv/
 backend/venv/
+backend/.venv/
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Environment files
+.env
 backend/.env
+
+# ==========================
+# React / Node
+# ==========================
+node_modules/
+frontend/node_modules/
+
+# ==========================
+# IDE
+# ==========================
+.vscode/
+.idea/
+
+# ==========================
+# Logs
+# ==========================
+*.log
+
+# ==========================
+# OS Files
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Build / Cache
+# ==========================
+dist/
+build/
+
+# ==========================
+# Optional: Trained models
+# (Uncomment if you don't want
+# to upload model weights)
+# ==========================
+# backend/results/
+# *.pt
